@@ -12,7 +12,7 @@
 **開発環境**  
   
     *開発ソフトなど* -- VSCode,GoogleChrome  
-    *使用サーバー* -- 未定  
+    *使用サーバー* -- Render,github  
     *special thanks* -- なし  
   
 ***  
@@ -58,5 +58,21 @@ prot 1.3.0Z : READMEの改行不良の原因を調べる
 prot 1.3.1 : READMEの開業を直す  
 prot 1.3.2 : READMEの微調整  
 prot 1.3.2A : Akijin Caveの名前をつける。  
+
+prot 2.0.0 : nodeを導入し、index.htmlをindex.ejsとし、見れるようにした。
+prot 2.1.0 : indexからスタイルシートとjs（静的）を読み込めるようにした
+prot 2.2.0 : 全てのサイトのhtmlからejsへの変更を完了。app.jsで接続
+prot 2.3.0 : 大幅なバグ改修。ouboから接続できないのを直した。
+prot 2.3.1 : ejsたちのリンクが故障していたため、治した。
+prot 2.3.2 : TopBarLabel.jsのリンクも改修した。
+
+alpha 0.0.0 : サーバーを検索. Xserver を検討
+alpha 0.1.0 : Xserverのサーバーを開設。
+alpha 0.2.0 : ドメインも開設。
+alpha 0.3.0 : Xserverのターミナルを開けない障害があり、調べる
+alpha 0.4.0 : ターミナルを開くには1000円弱必要ということが判明。
+alpha 0.5.0 : サーバー変更を検討し、Renderを発見
+alpha 0.6.0 : 別にリポジトリを作成し、Renderでサーバーを開設
+alpha 0.7.0 : サーバーに接続できることを確認。
 
 ***
