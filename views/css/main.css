@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+    width: 100%;
+}
+header{
+    height: 300px;
+    text-align: center;
+    padding: 50px;
+    background-image: url("https://sozaino.site/wp-content/uploads/2022/02/hoshi59-.png");
+    background-size: cover;
+}
+header h1{
+    font-size: 3em;
+}
+header p{
+    line-height: 0em;
+}
+footer{
+    height: 100px;
+    padding: 20px;
+    background-color: #aaf;
+}
+footer p{
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 25px;
+}
+.news{
+    background-color: #ddd;
+    margin: 20px 0;
+}
+.news h1{
+   display: inline-block;
+   margin-left: 30px;
+}
+.slideBar{
+    margin-left: 40px;
+    text-align: right;
+    position: relative;
+}
+
+hr{
+    margin: 0 20px;
+}
+
+#topBar{
+    display: flex;
+    margin-top: 10px;
+    border-bottom: gray solid 1px;
+    padding: 5px;
+    height: 60px;
+}
+
+.top-bar-link{
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    padding: 0px;
+    background-color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    margin: 0 10px;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: 30px;
+}
+.top-bar-link:hover{
+    color: #444;
+    background-color: #ccf;
+    border: #aaf solid 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.bar-light{
+    background-color: #fff;
+}
+
+.bar-light:hover{
+    background-color: #eef;
+    border: #ccf solid 5px;
+    padding: 10px;
+    color: #888;
+}
+
+@media (max-width: 767px){
+    footer{
+        height: 50px;
+        padding: 30px;
+        background-color: #aaf;
+    }
+    footer p{
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+}
