@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探す</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<body onload="LoadTopBar('探す')">
+    <div  id="topBar">
+
+    </div>
+    <h1>探す</h1>
+    <table>
+        <tr><th width="10%" class="num">番号</th><th>名前</th><th>票数</th></tr>
+        <% for (i in datas) {%>
+            <%- include("../forinstance/votingTemp.ejs", {
+                num: datas[i].id,
+                name: datas[i].name,
+                evalCount: datas[i].eval
+            }) %>
+        <% } %>
+    </table>
+    <p><a href="/search">検索に戻る</a></p>
+    <script src="../staticJS/TopBarLabel.js"></script>
+</body>
+</html>

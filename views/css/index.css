@@ -34,6 +34,36 @@ ul a:hover{
     padding: 35px;
 }
 
+footer{
+    height: 100px;
+    background-color: #aaf;
+}
+footer p{
+    display: inline-block;
+    margin: 20px;
+    margin-right: 40px;
+    font-size: 25px;
+}
+.accountBOX{
+    float: right;
+    background-color: #77a;
+    color: white;
+    height: 100%;
+    padding: 0 30px;
+    font-size: 1em;
+    text-align: center;
+    transition: all 1s;
+    box-shadow: none;
+    border: linear-gradient(#77a, #007) solid 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.accountBOX:hover{
+    background-color: #007;
+    padding: 0 10px;
+    box-shadow: none;
+}
+
 @media(max-width: 767px){
     ul{
         margin-top: 100px;
@@ -69,5 +99,15 @@ ul a:hover{
     ul li .detailOfLink{
         font-size: 15px;
         color: #555;
+    }
+    footer{
+        height: 50px;
+        padding: 30px;
+        background-color: #aaf;
+    }
+    footer p{
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 15px;
     }
 }

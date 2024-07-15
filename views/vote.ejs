@@ -12,23 +12,19 @@
         </div>
         <main>
             <h1>投票</h1>
-            <form method="post" >
+            <%= messageForVote %>
+            <form method="post" action="/vote/post">
                 <ul>
-                    <li>   
-                        <label class="number">
-                            クレヂットカード番号
-                            <input type="text" required="number" name="id">
-                        </label>
-                    </li>
                     <li>
                         <label class="vote-post">
-                            美女の投票
-                            <input type="text" required="number" name="girlid">
+                            人への投票
+                        </label>
+                        <input type="text" required="number" name="girlId">
                     </li>
                 </ul>
                 <button type="submit">送信</button>
             </form>
         </main>
-        <script src="staticJS/TopBarLabel.js"></script>
+        <script src="/staticJS/TopBarLabel.js"></script>
     </body>
 </html>

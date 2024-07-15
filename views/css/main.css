@@ -15,16 +15,6 @@ header h1{
 header p{
     line-height: 0em;
 }
-footer{
-    height: 100px;
-    padding: 20px;
-    background-color: #aaf;
-}
-footer p{
-    display: inline-block;
-    margin-right: 40px;
-    font-size: 25px;
-}
 .news{
     background-color: #ddd;
     margin: 20px 0;
@@ -82,17 +72,4 @@ hr{
     border: #ccf solid 5px;
     padding: 10px;
     color: #888;
-}
-
-@media (max-width: 767px){
-    footer{
-        height: 50px;
-        padding: 30px;
-        background-color: #aaf;
-    }
-    footer p{
-        display: inline-block;
-        margin-right: 20px;
-        font-size: 15px;
-    }
 }

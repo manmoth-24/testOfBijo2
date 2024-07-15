@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探す</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<body onload="LoadTopBar('探す')">
+    <div  id="topBar">
+
+    </div>
+    <h1>探す</h1>
+    <form method="post" action="/search/result">
+        <label>検索:
+            <input type="text" name="search">
+        </label>
+        <input type="submit" value="検索">
+    </form>
+    <script src="../staticJS/TopBarLabel.js"></script>
+</body>
+</html>

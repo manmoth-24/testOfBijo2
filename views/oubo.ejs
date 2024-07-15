@@ -2,15 +2,22 @@
 <html>
     <head>
         <title>応募しよう！</title>
-        <link rel="stylesheet" href="css/oubo.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/oubo.css">
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body onload="LoadTopBar('応募')">
         <!--トップバー、メイン意外入れる予定-->
-        <div  id="topBar">
+        <div id="topBar">
 
         </div>
-        <h1>未編集</h1>
-        <script src="staticJS/TopBarLabel.js"></script>
+        <h1>応募</h1>
+        <p><%= resultOfOubo %></p>
+        <form method="post" action="/oubo/post">
+            <label>
+                名前: <input type="text" name="ouboName">
+            </label>
+            <input type="submit" value="送信">
+        </form>
+        <script src="/staticJS/TopBarLabel.js"></script>
     </body>
 </html>

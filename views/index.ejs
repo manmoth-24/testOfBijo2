@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>テストレイアウト</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <header>
@@ -43,13 +43,15 @@
     </main>
     <section class="news">
         <hr>
-        <h3 class="slideBar"><a href="newsAa.com">サーバーが学校にバレました</a></h3>
-        <h3 class="slideBar"><a href="newsAb.com">訴訟を起こされるかもしれません</a></h3>
+        <h3 class="slideBar">ご利用いただきありがとうございます。</h3>
         <hr>
     </section>
     <footer>
         <p>お問い合わせ</p>
-        <p>説明</p>
+        <p onclick="window.open('/explain')">説明</p>
+        <a href="/login" class="accountBOX">
+            <p><%=accountName %></p>
+        </a>
     </footer>
     <script src="/staticJS/index_slide.js"></script>
 </body>
