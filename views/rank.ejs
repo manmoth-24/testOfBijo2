@@ -18,7 +18,7 @@
         <tr><th width="10%" class="num">番号</th><th>名前</th><th>票数</th></tr>
         <% var num = 0; %>
         <% for (var i = 0;i < datas.length; i++) { %>
-            <%- include('./forinstance/votingTemp.ejs',
+            <%- include('./forInstance/votingTemp.ejs',
                 {
                     num: ++num,
                     name: datas[i].name,
