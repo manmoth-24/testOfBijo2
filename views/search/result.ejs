@@ -15,7 +15,7 @@
     <table>
         <tr><th width="10%" class="num">番号</th><th>名前</th><th>票数</th></tr>
         <% for (i in datas) {%>
-            <%- include("../forinstance/votingTemp.ejs", {
+            <%- include("../forInstance/votingTemp.ejs", {
                 num: datas[i].id,
                 name: datas[i].name,
                 evalCount: datas[i].eval
