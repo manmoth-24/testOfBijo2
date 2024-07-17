@@ -23,14 +23,14 @@ router.post('/makeAccount', (req, res, next) =>{
   var accountNewPass = req.body["newPass"]
 
   var q = 'select * from accountsData where account="' + accountName + '"'
-  var q2 = 'insert into accountsData (account, password, votingCount) values (?, ?, 0)'
+  var q2 = 'insert into accountsData (account, password, votingCount) values (?, ?, ?)'
   
   db.serialize(()=>{
     db.get(q, [], (err, rows) => {
       console.log(rows)
       if (!err){
         if (rows == undefined || rows == []){
-          db.run(q2, accountName, accountNewPass)
+          db.run(q2, accountName, accountNewPass, 0)
           req.session.accountID = accountName
           res.render("login/loginResult", {
             title: 'アカウントの作成が完了しました。',
