@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <form method="post" action="./loginResult">
+        <h1>ログイン</h1>
+        <p><%= messageForLogin %></p>
+        <label>ID: </label>
+        <input type="text" name="accountID"><br>
+        <label>Pass:</label>
+        <input type="text" name="accountPass">
+        <br>
+        <input type="submit" class="sendButton" value="送信"><br><br>
+        <a href="/login/makeAccount">アカウントを作成</a>
+    </form>
+</body>
+</html>
