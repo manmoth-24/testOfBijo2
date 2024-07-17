@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs')
 
+var maxVoteCount = 10
 
 const sqlite3 = require('sqlite3')
 
@@ -26,30 +27,47 @@ router.post('/post', function(req, res, next) {
   var votingForName = req.body['girlId']
 
   var updateQ = "UPDATE mydata SET eval = eval + 1 WHERE name = ?";
+  var readQ = "select * from accountsData where account = ?"
+  var updateVcQ = "UPDATE accountsData SET votingCount = ? WHERE account = ?"
   
-  var readQ = ""
-  db.serialize(() => {
-    /*
-    var nowEval = 0
-    db.get(readQ, [votingForName], (err, dFromName)=>{
-      if (!err){
-        if (dFromName != undefined){
-          nowEval = dFromName.eval
-        }
-      }
-    })
-      */
+  var accountName = req.session.accountID
 
-    db.run(updateQ, [votingForName], (err)=>{
-      if (err){
+  db.serialize(() => {
+    db.get(readQ, [accountName], (err, account)=>{
+      if (!err){
+        console.log(account)
+        var votingCount = account.votingCount
+        if (votingCount >= maxVoteCount){
+          res.render('vote', {
+            messageForVote: '投票の上限（' + maxVoteCount + '回）に達したため、投票が不可です。'
+          })
+        }else{ 
+          db.run(updateQ, [votingForName], (err)=>{
+            if (err){
+              console.error(err.message)
+            }
+          })
+          if(votingCount == -1){
+            res.render('vote', {
+              messageForVote: votingForName + 'に投票しました。<br>' + 
+              'スペシャルオプションです。'
+            })
+          }else{
+            db.run(updateVcQ, votingCount + 1, accountName)
+            res.render('vote', {
+              messageForVote: votingForName + 'に投票しました。<br>' +
+              '残り回数は ' + (maxVoteCount - votingCount - 1) + ' 回です'
+            })
+          }
+        }
+      }else{
         console.error(err.message)
       }
     })
 
+    
   })
-    res.render('vote', {
-      messageForVote: votingForName + 'に投票しました。'
-    })
 })
+    
 
 module.exports = router;
