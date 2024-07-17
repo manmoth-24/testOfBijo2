@@ -23,7 +23,7 @@ router.post('/makeAccount', (req, res, next) =>{
   var accountNewPass = req.body["newPass"]
 
   var q = 'select * from accountsData where account="' + accountName + '"'
-  var q2 = 'insert into accountsData (account, password) values (?, ?)'
+  var q2 = 'insert into accountsData (account, password, votingCount) values (?, ?, 0)'
   
   db.serialize(()=>{
     db.get(q, [], (err, rows) => {
